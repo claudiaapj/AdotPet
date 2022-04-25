@@ -1,9 +1,6 @@
-<?php
- 
-   
-?>
 
 <!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -19,9 +16,9 @@
        
         <nav>
             <a href="#">Home</a>
-            <a href="#">Sobre</a>
+            <a href="#">Adoção</a>
             <a href="#">Contato</a>
-            <a href="#">Login</a>
+            <a href="login.php">Login</a>
         </nav>
     </header>
     <main>
@@ -30,15 +27,15 @@
         </figure>
        <figure class="card">
            <figcaption>
-                <form action="" method="post">
+                <form action="./lib/validar.php" method="$_POST">
                     <ul>
                         <li>
                             <label for="">Usuário</label>
-                            <input type="text" name="usuario" id="usuario" placeholder = "  Digite o seu usuário">
+                            <input type="text" name="usuario" id="usuario" placeholder = "  Digite o seu usuário" required>
                         </li>
                         <li>
                             <label for="">Senha</label>
-                            <input type="number" name="senha" id="senha" placeholder = "  Digite a sua senha">
+                            <input type="password" name="password" id="senha" placeholder = "  Digite a sua senha" required >
                         </li>
                         <li>
                             <button type="submit">Entrar</button>
