@@ -1,3 +1,12 @@
+<?php
+    include './lib/validar.php';
+
+    if(isset($_POST['usuario']) && isset($_POST['password'])){
+        $usuario= htmlspecialchars($_POST['usuario']) ;
+        $password= md5(htmlspecialchars($_POST['password']));
+        login($usuario, $password);      
+    }
+?>
 
 <!DOCTYPE html>
 
@@ -27,7 +36,7 @@
         </figure>
        <figure class="card">
            <figcaption>
-                <form action="./lib/validar.php" method="$_POST">
+                <form action="login.php" method="POST">
                     <ul>
                         <li>
                             <label for="">Usuário</label>
@@ -42,7 +51,16 @@
                            
                         </li>
                     </ul>
+                   
+                    <?php
+                        if(isset($_GET['login']) && $_GET['login'] =='erro'){
+                            echo'<h4 class = "error"> Usuário ou senha inválido. </h4>';
+                        }
+                       
+                ?>
+    
                 </form>
+            
             </figcaption>
         </figure>
 
