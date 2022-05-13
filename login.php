@@ -24,9 +24,9 @@
         <h1>AdotPet</h1>
        
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Adoção</a>
-            <a href="#">Contato</a>
+            <a href="./index.php ">Home</a>
+            <a href="adocao.php">Adoção</a>
+            <a href="contato.php">Contato</a>
             <a href="login.php">Login</a>
         </nav>
     </header>
