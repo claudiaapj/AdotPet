@@ -70,6 +70,7 @@ function getTipo($int){
     }
 
     function getStrSexo($str){
+    
         switch($str){
             case 'Cachorro' :
                 return 0;
@@ -82,9 +83,9 @@ function getTipo($int){
         }
     }
 
-    function cadastraPet($nome, $strSexo, $raça, $strTipo, $descricao){
-        $query = "INSERT INTO pets (nome, sexo, raca, tipo, descricao)  
-        values('" . $nome . "','" . $sexo . "'," . $raca . "," . $tipo ."," . $descricao.");";
+    function cadastraPet($nome, $strSexo, $raça, $strTipo, $foto, $descricao){
+        $query = "INSERT INTO pets (nome, sexo, raca, tipo, foto, descricao)  
+        values('" . $nome . "','" . getStrSexo($strSexo) . "'," . $raca . "," . getStrTipo($strTipo) ."," .$foto.","  . $descricao.");";
         $link = conecta();
         if($link !== NULL){
             $result = mysqli_query($link, $query);
@@ -95,6 +96,7 @@ function getTipo($int){
         }
         
     }
-  
+   
+
    
 ?>

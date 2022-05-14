@@ -23,7 +23,7 @@
     <main>
        <H2>Cadastro para adoção</H2>
 
-       <form class="cadastrar" action="./lib/valida.php" method="post">
+       <form class="cadastrar" action="./lib/validar.php" method="post">
            <ul>
                 <li>
                     <label> Nome: </label>
@@ -60,6 +60,7 @@
                     <input id="cadastro-btn" type="button" value="Cancelar" onclick="bt_cancelar()">
                 </li>
             </ul>
+    </form>
 
     </main>
     <footer>
