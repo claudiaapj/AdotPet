@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/estilos.css">
+    <link rel="stylesheet" href="./assets/css/stilos.css">
     <title>AdotPet</title>
 </head>
 <body>
@@ -24,15 +24,16 @@
         </nav>
     </header>
     <main>
-    <table>
+        <table>
             <tr>
-                <th class="cor_sim">Matrícula</th>
-                <th class="cor_nao">Nome</th>
-                <th class="cor_sim">sexo</th>
-                <th class="cor_nao">Raça</th>
-                <th class="cor_sim">Tipo</th>
-                <th class="cor_sim">Foto</th>
-                <th class="cor_sim">Descrição</th>
+                <th >Matrícula</th>
+                <th >Nome</th>
+                <th >sexo</th>
+                <th >Raça</th>
+                <th >Tipo</th>
+                <th >Foto</th>
+                <th >Descrição</th>
+                <th >Deletar/Editar</th>
 
             </tr>
             <?php
@@ -41,17 +42,18 @@
                         echo '<td>'. $pets[$i]['matricula'] .'</td>';
                         echo '<td>'. $pets[$i]['nome'] .'</td>';
                         echo '<td>'. $pets[$i]['sexo'] .'</td>';
-                        echo '<td> R$ '. $pets[$i]['raca'] .'</td>';
-                        echo '<td> R$ '. $pets[$i]['tipo'] .'</td>';
-                        echo '<td> R$ '. $pets[$i]['foto'] .'</td>';
-                        echo '<td> R$ '. $pets[$i]['descricao'] .'</td>';
-                        echo '<td>
-                            <button onclick="deletar('.$pets[$i]['id'].')">Deletar</button>
-                            <button onclick="editar('.$pets[$i]['id'].')">Editar</button>
-                        </td>';
-                    echo '</tr>';
-                }
-            ?>   
+                        echo '<td> '. $pets[$i]['raca'] .'</td>';
+                        echo '<td> '. $pets[$i]['tipo'] .'</td>';
+                        echo '<td>  '. $pets[$i]['foto'] .'</td>';
+                        echo '<td> '. $pets[$i]['descricao'] .'</td>';
+                        echo '<td >
+                                <button class = "tab-botao onclick="deletar('.$pets[$i]['matricula'].')"> Deletar </button>
+                                <button class = "tab-botao onclick="editar('.$pets[$i]['matricula'].')"> Editar </button>
+                            </td>';
+                        echo '</tr>';
+                    }
+                ?>  
+        </table> 
     </main>
     <footer>
         <p>Atividade proposta no curso Programador Web Senac</p>
