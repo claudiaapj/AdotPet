@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/stilos.css">
+    <link rel="stylesheet" href="./assets/css/estilos.css">
     <title>AdotPet</title>
 </head>
 <body>
@@ -38,6 +38,11 @@
             </tr>
             <?php
                 for($i = 0; $i < count($pets); $i++){
+                    $foto = $pets[$i]['foto'];
+                    if($foto === NULL){
+                        $foto = '../assets/img/fotos/adot.png';
+                        
+                    }
 
                         echo '<td>'. $pets[$i]['matricula'] .'</td>';
                         echo '<td>'. $pets[$i]['nome'] .'</td>';

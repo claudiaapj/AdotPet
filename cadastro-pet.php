@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/stilos.css">
+    <link rel="stylesheet" href="./assets/css/estilos.css">
     <title>Cadastro Pet</title>
 </head>
 <body>
@@ -23,8 +23,13 @@
     <main>
        <H2>Cadastro para adoção</H2>
 
-       <form class="cadastrar" action="./lib/validar.php" method="post">
+       <form class="cadastrar" action="./lib/validar.php" method="post"  enctype="multipart/form-data">
            <ul>
+               <li>
+               <label for="imagem">Imagem:</label>
+                <input type="file" name="foto"/>
+                <br/>
+               </li>
                 <li>
                     <label> Nome: </label>
                     <input name="nome" type="text" id="nome">
@@ -33,9 +38,9 @@
                 <label> Sexo: </label>
                 <select id="box-sexo" name="sexo">
                         <option value="selecione">Selecione uma opção</option>
-                        <option value="femea">Fêmea</option>
-                        <option value="macho">Macho</option>
-                        <option value="indefinido">Indefinido</option>
+                        <option value="femea">FÊMEA</option>
+                        <option value="macho">MACHO</option>
+                        <option value="indefinido">INDEFINIDO</option>
                 </select>
                 </li>
                 <li>
@@ -46,9 +51,9 @@
                 <label> Tipo: </label>
                 <select id="box-tipo" name="tipo">
                         <option value="selecione">Selecione uma opção</option>
-                        <option value="cachorro">Cachorro</option>
-                        <option value="gato">Gato</option>
-                        <option value="outros">Outros</option>
+                        <option value="cachorro">CACHORRO</option>
+                        <option value="gato">GATO</option>
+                        <option value="outros">OUTROS</option>
                 </select>
                 </li>
                 <li>
